@@ -3,7 +3,6 @@ import { Hero } from "./Hero";
 import { Overview } from "./Overview";
 import { Accommodation } from "./Accommodation";
 import { DayCard } from "./Itinerary";
-import { Testimonials } from "./Testimonials";
 import { Policies } from "./Policies";
 import { ThankYou } from "./ThankYou";
 import { PrintButton } from "./PrintButton";
@@ -14,9 +13,8 @@ import styles from "./QuotationTemplate.module.css";
 
 /**
  * Full Offbeat Compass "modern" quotation template — cover, trip overview,
- * accommodation, one page per itinerary day, testimonials, policies,
- * thank-you — each with the same "CONTACT US" + page-number footer as the
- * reference PDF.
+ * accommodation, one page per itinerary day, policies, thank-you — each
+ * with the same "CONTACT US" + page-number footer as the reference PDF.
  *
  * Every page is 210mm wide and exactly as tall as its own content (with a
  * 140mm floor), matching the reference PDF, whose twelve pages are all
@@ -41,7 +39,6 @@ export function QuotationTemplate({
   showPrintButton?: boolean;
 }) {
   const hasHotels = data.hotels.length > 0;
-  const hasTestimonials = data.testimonials.length > 0;
   const hasPolicies =
     data.policies.inclusions.length > 0 ||
     data.policies.exclusions.length > 0 ||
@@ -54,7 +51,6 @@ export function QuotationTemplate({
     1 + // trip overview
     (hasHotels ? 1 : 0) +
     data.itinerary.length +
-    (hasTestimonials ? 1 : 0) +
     (hasPolicies ? 1 : 0) +
     1; // thank-you
 
@@ -115,12 +111,6 @@ export function QuotationTemplate({
           <DayCard day={day} />
         </PrintPage>
       ))}
-
-      {hasTestimonials && (
-        <PrintPage page={nextPage()} totalPages={totalPages} agency={data.agency} square>
-          <Testimonials testimonials={data.testimonials} />
-        </PrintPage>
-      )}
 
       {hasPolicies && (
         <PrintPage page={nextPage()} totalPages={totalPages} agency={data.agency}>

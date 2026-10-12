@@ -11,6 +11,5 @@ export type {
   ItineraryDay,
   ItineraryNote,
   PolicyBlock,
-  Testimonial,
   ThankYouBlock,
 } from "./types";

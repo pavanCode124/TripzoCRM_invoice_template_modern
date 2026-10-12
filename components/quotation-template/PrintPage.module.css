@@ -30,12 +30,11 @@
   min-height: 297mm;
 }
 
-/* The itinerary day pages and the testimonials page are a fixed 210mm
-   square in the reference (every day page measures exactly 594.96pt tall —
-   the same as its own width — no matter how short or long that day's
-   content is) rather than shrinking to content. Again min-height only, so
-   an unusually long day's content still grows the page instead of being
-   clipped. */
+/* The itinerary day pages are a fixed 210mm square in the reference (every
+   day page measures exactly 594.96pt tall — the same as its own width —
+   no matter how short or long that day's content is) rather than
+   shrinking to content. Again min-height only, so an unusually long day's
+   content still grows the page instead of being clipped. */
 .pageSquare {
   min-height: 210mm;
 }

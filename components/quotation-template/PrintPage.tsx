@@ -10,9 +10,9 @@ import styles from "./PrintPage.module.css";
  * instead of being stranded at the bottom of a half-empty sheet.
  *
  * The reference PDF's cover, trip-overview and thank-you pages are each a
- * fixed full A4 sheet (`fill`) and its itinerary-day/testimonials pages are
- * each a fixed 210mm square (`square`) regardless of how little content
- * they hold — both are min-heights only, so a page whose real content runs
+ * fixed full A4 sheet (`fill`) and its itinerary-day pages are each a
+ * fixed 210mm square (`square`) regardless of how little content they
+ * hold — both are min-heights only, so a page whose real content runs
  * longer than that floor still grows instead of clipping.
  *
  * <PrintPageSizer> measures each of these elements and writes the matching
@@ -40,7 +40,7 @@ export function PrintPage({
   isLast?: boolean;
   /** Keep a full A4 sheet instead of shrinking to the content (cover, trip overview, thank-you). */
   fill?: boolean;
-  /** Keep a 210mm square instead of shrinking to the content (itinerary days, testimonials). */
+  /** Keep a 210mm square instead of shrinking to the content (itinerary days). */
   square?: boolean;
 }) {
   return (

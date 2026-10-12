@@ -232,33 +232,6 @@ export const sampleQuotation: QuotationData = {
     },
   ],
 
-  testimonials: [
-    {
-      quote:
-        "My sister and I travelled to Kerala and we truly appreciated the support from Swarupa throughout the trip. As two women travellers, safety was very important for us and they ensured trusted drivers, good hotels and smooth coordination. It was a beautifully curated experience.",
-      name: "Sravanthi",
-      tripLabel: "Trip to Kerala",
-    },
-    {
-      quote:
-        "Special thanks to Srikanth for planning such a wonderful Kerala trip for our family. The itinerary was perfectly balanced and stress-free. Hotels, cab service and sightseeing were all well organized. His travel expertise really helped us enjoy Kerala without any worries.",
-      name: "Kiran",
-      tripLabel: "Trip to Kerala",
-    },
-    {
-      quote:
-        "Our Kerala private trip was beautifully curated by Srikanth and the OffbeatCompass team. Every place and stay felt carefully selected. From Munnar viewpoints to the Alleppey houseboat experience, everything was smooth. You can clearly see the team's expertise in planning Kerala trips",
-      name: "Ajay",
-      tripLabel: "Trip to Kerala",
-    },
-    {
-      quote:
-        "We were a group of 3 girls travelling to Kerala and safety was our biggest concern. OffbeatCompass planned everything perfectly with trusted drivers, good hotels and constant support. We felt completely safe throughout the trip. The itinerary was very well curated and covered the best of Munnar and Alleppey",
-      name: "Neha",
-      tripLabel: "Trip to Kerala",
-    },
-  ],
-
   policies: {
     inclusions: [
       "Accommodation in Double sharing basis all the above Mentioned Hotels",

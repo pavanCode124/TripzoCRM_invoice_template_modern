@@ -113,13 +113,6 @@ export interface PolicyBlock {
   bookingTerms: string[];
 }
 
-export interface Testimonial {
-  quote: string;
-  name: string;
-  /** e.g. "Trip to Kerala" */
-  tripLabel: string;
-}
-
 export interface ThankYouBlock {
   heading: string;
   subheading: string;
@@ -148,7 +141,6 @@ export interface QuotationData {
   servicesInclude: ServiceKey[];
   hotels: HotelStay[];
   itinerary: ItineraryDay[];
-  testimonials: Testimonial[];
   policies: PolicyBlock;
   thankYou: ThankYouBlock;
 }

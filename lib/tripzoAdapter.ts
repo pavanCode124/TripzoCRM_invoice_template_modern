@@ -4,7 +4,6 @@ import type {
   PolicyBlock,
   QuotationData,
   ServiceKey,
-  Testimonial,
 } from "@/components/quotation-template/types";
 
 /**
@@ -36,39 +35,6 @@ const FALLBACK_HERO_IMAGE =
   "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1600&q=80";
 const FALLBACK_HOTEL_IMAGE =
   "https://images.unsplash.com/photo-1657215223750-c4988d4a2635?auto=format&fit=crop&w=900&q=80";
-
-// The reference PDF's testimonials page is agency-wide copy (not specific to
-// any one customer's booking) and TripzoCRM's public itinerary endpoint has
-// no testimonials table to read from — so this is a fixed editorial block,
-// the same way a brochure's back cover doesn't change per quotation. Swap
-// these for your own agency's reviews, or fetch them from wherever you
-// actually store them (a CMS, a settings record, etc).
-const STATIC_TESTIMONIALS: Testimonial[] = [
-  {
-    quote:
-      "My sister and I travelled to Kerala and we truly appreciated the support throughout the trip. As two women travellers, safety was very important for us and they ensured trusted drivers, good hotels and smooth coordination. It was a beautifully curated experience.",
-    name: "Sravanthi",
-    tripLabel: "Trip to Kerala",
-  },
-  {
-    quote:
-      "Special thanks for planning such a wonderful trip for our family. The itinerary was perfectly balanced and stress-free. Hotels, cab service and sightseeing were all well organized. The travel expertise really helped us enjoy the trip without any worries.",
-    name: "Kiran",
-    tripLabel: "Trip to Kerala",
-  },
-  {
-    quote:
-      "Our private trip was beautifully curated — every place and stay felt carefully selected. From the viewpoints to the houseboat experience, everything was smooth. You can clearly see the team's expertise in planning these trips.",
-    name: "Ajay",
-    tripLabel: "Trip to Kerala",
-  },
-  {
-    quote:
-      "We were a small group travelling and safety was our biggest concern. Everything was planned perfectly with trusted drivers, good hotels and constant support. We felt completely safe throughout the trip, and the itinerary was very well curated.",
-    name: "Neha",
-    tripLabel: "Trip to Kerala",
-  },
-];
 
 // -----------------------------------------------------------------------
 // Raw API shape (loose — just the fields this adapter reads)
@@ -392,7 +358,6 @@ export function toQuotationData(raw: RawResponse): QuotationData {
     servicesInclude,
     hotels,
     itinerary,
-    testimonials: STATIC_TESTIMONIALS,
     policies,
 
     thankYou: {
