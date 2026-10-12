@@ -1,0 +1,110 @@
+/* The reference's closing page is a full A4 sheet: the navy panel fills
+   the whole printable area and its content sits vertically centred inside
+   it, with the repeating CONTACT US footer below. */
+.section {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--qt-navy);
+  color: #fff;
+  padding: 48px;
+  text-align: center;
+}
+
+.heading {
+  font-family: var(--qt-font-heading);
+  font-weight: 800;
+  font-size: 42px;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.subheading {
+  margin: 10px 0 0;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--qt-accent);
+}
+
+.message {
+  max-width: 520px;
+  margin: 24px auto 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.infoGrid {
+  max-width: 572px;
+  margin: 32px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  text-align: left;
+}
+
+.infoBox {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 14px 18px;
+}
+
+.infoLabel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+}
+
+.infoValue {
+  margin: 3px 0 0;
+  font-weight: 700;
+  font-size: 13.5px;
+  word-break: break-word;
+}
+
+.agencyName {
+  margin: 32px 0 0;
+  font-family: var(--qt-font-heading);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.qrRow {
+  max-width: 572px;
+  margin: 16px auto 0;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-align: left;
+}
+
+.qrImage {
+  flex: none;
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+  background: #fff;
+  padding: 5px;
+}
+
+.qrText h4 {
+  margin: 0 0 5px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.qrLink {
+  font-size: 10.5px;
+  line-height: 1.5;
+  color: var(--qt-accent);
+  word-break: break-all;
+}

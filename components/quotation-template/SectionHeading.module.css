@@ -1,0 +1,30 @@
+/* Reference: a solid navy rounded bar, ~52px tall, bold lime uppercase
+   title letter-spaced wide, optional right-aligned trailing text in a
+   muted white. Sits flush at the top of the page's content area. */
+.bar {
+  background: var(--qt-navy);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.title {
+  font-family: var(--qt-font-heading);
+  font-weight: 700;
+  font-size: 15.5px;
+  letter-spacing: 0.14em;
+  color: var(--qt-accent-light);
+  margin: 0;
+}
+
+.trailing {
+  flex: none;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  white-space: nowrap;
+}

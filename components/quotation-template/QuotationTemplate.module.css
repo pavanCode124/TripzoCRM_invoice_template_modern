@@ -1,0 +1,86 @@
+.root {
+  /* ---- Design tokens, scoped to this component tree only ----
+     Measured off the reference PDF: a near-black navy, an emerald "brand"
+     green and a bright lime "accent" carry the whole palette. */
+  --qt-navy: #0a1120;
+  --qt-navy-soft: #121b2e;
+  --qt-brand: #049669;
+  --qt-brand-dark: #047857;
+  --qt-brand-soft: #f0fdf4;
+  --qt-brand-soft-strong: #d1fae5;
+  --qt-accent: #a3e635;
+  --qt-accent-light: #d9f99d;
+  --qt-gold: #f59e0b;
+  --qt-paper: #f6f8fa;
+  --qt-page-bg: #eef1f5;
+  --qt-border: #e2e8f0;
+  --qt-muted: #64748b;
+  --qt-muted-light: #94a3b8;
+  --qt-font-heading: "Poppins", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+  --qt-font-body: "Inter", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+
+  font-family: var(--qt-font-body);
+  color: var(--qt-navy);
+  background: var(--qt-page-bg);
+  line-height: 1.5;
+  padding: 28px 0;
+}
+
+.root,
+.root * {
+  box-sizing: border-box;
+  /* Without this, Chrome/Edge/Firefox silently drop every background
+     colour and gradient when printing (and most "Save as PDF" flows go
+     through print), even with "Background graphics" left on. This is the
+     standard override — it forces backgrounds to render in the printed
+     output regardless of that setting. */
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+}
+
+.root img {
+  max-width: 100%;
+  display: block;
+}
+
+.root a {
+  color: var(--qt-brand);
+}
+
+/* No padding here any more — <PrintPage>'s own .body provides the page
+   margins, so a section just needs to be a block; kept as a class (rather
+   than deleted) so Accommodation/Overview/Policies don't need their own
+   wrapper element. */
+.section {
+  background: #fff;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background: var(--qt-border);
+  border: none;
+  margin: 40px 0;
+}
+
+/* Fallback only. <PrintPageSizer> overrides this at print time with one
+   named @page per page, each carrying that page's own measured height —
+   which is how the reference PDF ends up 595pt wide but a different height
+   on nearly every page. Browsers without named-page support fall back to
+   plain A4 sheets. */
+@page {
+  size: 210mm 297mm;
+  margin: 0;
+}
+
+@media print {
+  /* CSS Modules won't let this file touch html/body directly (no local
+     class in a bare global selector) — the host page's own global
+     stylesheet should reset those for print; see app/globals.css here for
+     the pattern. */
+  .root {
+    background: #fff;
+    padding: 0;
+  }
+}
