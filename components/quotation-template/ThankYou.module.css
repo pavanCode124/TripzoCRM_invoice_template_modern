@@ -75,36 +75,19 @@
 }
 
 .qrRow {
-  max-width: 572px;
   margin: 16px auto 0;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  padding: 18px;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  text-align: left;
+  padding: 14px;
+  display: inline-flex;
+  align-self: center;
 }
 
 .qrImage {
-  flex: none;
-  width: 80px;
-  height: 80px;
+  width: 92px;
+  height: 92px;
   border-radius: 6px;
   background: #fff;
-  padding: 5px;
-}
-
-.qrText h4 {
-  margin: 0 0 5px;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.qrLink {
-  font-size: 10.5px;
-  line-height: 1.5;
-  color: var(--qt-accent);
-  word-break: break-all;
+  padding: 6px;
 }

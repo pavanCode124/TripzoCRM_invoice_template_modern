@@ -43,17 +43,6 @@ export function ThankYou({
 
       <div className={styles.qrRow}>
         <img className={styles.qrImage} src={qrSrc} alt="Scan to view this quotation online" />
-        <div className={styles.qrText}>
-          <h4>View this quotation online</h4>
-          <a
-            className={styles.qrLink}
-            href={thankYou.quotationUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {thankYou.quotationUrl}
-          </a>
-        </div>
       </div>
     </section>
   );
